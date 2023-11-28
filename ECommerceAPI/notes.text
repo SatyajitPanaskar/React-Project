@@ -1,0 +1,13 @@
+
+--- password hide ke  liye 
+ link - https://cryptojs.gitbook.io/docs/
+  npm - npm i crypto-js
+AES
+The Advanced Encryption Standard (AES) is a U.S. Federal Information Processing Standard (FIPS). It was selected after a 5-year process where 15 competing designs were evaluated.
+var encrypted = CryptoJS.AES.encrypt("Message", "Secret Passphrase");
+​
+var decrypted = CryptoJS.AES.decrypt(encrypted, "Secret Passphrase");
+-------------------------------------------------------
+
+json Web token 
+npm - npm i jsonwebtoken
