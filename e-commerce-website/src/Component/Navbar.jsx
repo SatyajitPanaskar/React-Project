@@ -4,6 +4,7 @@ import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import SearchIcon from "@mui/icons-material/Search";
 import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
 const Container = styled.div`
   height: 80px;
   margin-top: -10px;
@@ -68,6 +69,8 @@ const MenuItem = styled.div`
   ${mobile({ fontSize: "11px", marginLeft: "5px" })}
 `;
 const Navbar = () => {
+  const quntity = useSelector((state) => state.cart.quntity);
+
   return (
     <>
       <Container>
@@ -80,13 +83,13 @@ const Navbar = () => {
             </SearchContainer>
           </Left>
           <Center>
-            <Logo>RUSHI.</Logo>
+            <Logo>Z-FSN.</Logo>
           </Center>
           <Right>
             <MenuItem>REGISTER</MenuItem>
             <MenuItem>SIGN IN</MenuItem>
             <MenuItem>
-              <Badge badgeContent={4} color="primary">
+              <Badge badgeContent={quntity} color="primary">
                 <ShoppingCartIcon />
               </Badge>
             </MenuItem>

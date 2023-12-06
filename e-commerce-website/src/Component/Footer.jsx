@@ -45,6 +45,7 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 20px;
+  margin-top: 20px;
 `;
 
 const Center = styled.div`
@@ -93,7 +94,7 @@ const Footer = () => {
   return (
     <Container>
       <Left>
-        <Logo>RUSHI.</Logo>
+        <Logo>Z-FASHION</Logo>
         <Desc>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
