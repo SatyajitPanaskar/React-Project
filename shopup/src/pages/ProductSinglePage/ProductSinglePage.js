@@ -10,6 +10,13 @@ import {
 import { STATUS } from "../../utlis/status";
 import { formatPrice } from "../../utlis/helpers";
 import Loader from "./../../components/Loader/Loader";
+import {
+  addToCart,
+  getCartMessageStatus,
+  setCartMessageOff,
+  setCartMessageOn,
+} from "../../store/cartSlice";
+import CartMessage from "./../../components/CartMessage/CartMessage";
 
 const ProductSinglePage = () => {
   const { id } = useParams();
@@ -17,17 +24,25 @@ const ProductSinglePage = () => {
   const product = useSelector(getProductSingle);
   const productSingleStatus = useSelector(getSingleProductStatus);
   const [quantity, setQuantity] = useState(1);
-  // getting single product
+  const cartMessageStatus = useSelector(getCartMessageStatus);
 
+  // getting single product
   useEffect(() => {
     dispatch(fetchAsyncProductSingle(id));
-  }, []);
+
+    if (cartMessageStatus) {
+      setTimeout(() => {
+        dispatch(setCartMessageOff());
+      }, 2000);
+    }
+  }, [cartMessageStatus]);
 
   let discountedPrice =
     product?.price - product?.price * (product?.discountPercentage / 100);
   if (productSingleStatus === STATUS.LOADING) {
     return <Loader />;
   }
+
   const increaseQty = () => {
     setQuantity((prevQty) => {
       let tempQty = prevQty + 1;
@@ -43,6 +58,18 @@ const ProductSinglePage = () => {
       return tempQty;
     });
   };
+
+  const addToCartHandler = (product) => {
+    let discountedPrice =
+      product?.price - product?.price * (product?.discountPercentage / 100);
+    let totalPrice = quantity * discountedPrice;
+
+    dispatch(
+      addToCart({ ...product, quantity: quantity, totalPrice, discountedPrice })
+    );
+    dispatch(setCartMessageOn(true));
+  };
+
   return (
     <main className="py-5 bg-whitesmoke">
       <div className="product-single">
@@ -59,6 +86,7 @@ const ProductSinglePage = () => {
                     className="img-cover"
                   />
                 </div>
+
                 <div className="product-img-thumbs flex align-center my-2">
                   <div className="thumb-item">
                     <img
@@ -178,7 +206,13 @@ const ProductSinglePage = () => {
                 <div className="btns">
                   <button type="button" className="add-to-cart-btn btn">
                     <i className="fas fa-shopping-cart"></i>
-                    <span className="btn-text mx-2">add to cart</span>
+                    <span
+                      className="btn-text mx-2"
+                      onClick={() => {
+                        addToCartHandler(product);
+                      }}>
+                      add to cart
+                    </span>
                   </button>
                   <button type="button" className="buy-now btn mx-3">
                     <span className="btn-text">buy now</span>
@@ -189,8 +223,9 @@ const ProductSinglePage = () => {
           </div>
         </div>
       </div>
+
+      {cartMessageStatus && <CartMessage />}
     </main>
   );
 };
-
 export default ProductSinglePage;

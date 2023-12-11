@@ -11,11 +11,13 @@ const Sidebar = () => {
   const dispatch = useDispatch();
   const isSidebarOn = useSelector(getSidebarStatus);
   const categories = useSelector(getAllCategories);
+
   useEffect(() => {
     dispatch(fetchAsyncCategories());
   }, [dispatch]);
+
   return (
-    <aside className={` sidebar ${isSidebarOn ? "hide-sidebar" : ""}`}>
+    <aside className={`sidebar ${isSidebarOn ? "hide-sidebar" : ""}`}>
       <button
         type="button"
         className="sidebar-hide-btn"
@@ -43,5 +45,4 @@ const Sidebar = () => {
     </aside>
   );
 };
-
 export default Sidebar;

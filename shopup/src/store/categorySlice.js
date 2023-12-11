@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { BASE_URL } from "../utlis/apiURL";
 import { STATUS } from "../utlis/status";
+
 const initialState = {
   categories: [],
   categoriesStatus: STATUS.IDLE,
@@ -41,6 +42,7 @@ const categorySlice = createSlice({
       });
   },
 });
+
 export const fetchAsyncCategories = createAsyncThunk(
   "categories/fetch",
   async () => {
@@ -58,6 +60,7 @@ export const fetchAsyncProductsOfCategory = createAsyncThunk(
     return data.products;
   }
 );
+
 export const getAllCategories = (state) => state.category.categories;
 export const getAllProductsByCategory = (state) =>
   state.category.categoryProducts;

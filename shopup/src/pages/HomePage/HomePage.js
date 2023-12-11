@@ -36,16 +36,16 @@ const HomePage = () => {
     }
   }
 
-  let catProductOne = products.filter(
+  let catProductsOne = products.filter(
     (product) => product.category === categories[0]
   );
-  let catProductTwo = products.filter(
+  let catProductsTwo = products.filter(
     (product) => product.category === categories[1]
   );
-  let catProductThree = products.filter(
+  let catProductsThree = products.filter(
     (product) => product.category === categories[2]
   );
-  let catProductFour = products.filter(
+  let catProductsFour = products.filter(
     (product) => product.category === categories[3]
   );
 
@@ -59,9 +59,8 @@ const HomePage = () => {
           <div className="categories py-5">
             <div className="categories-item">
               <div className="title-md">
-                <h3>See our Products</h3>
+                <h3>See our products</h3>
               </div>
-
               {productStatus === STATUS.LOADING ? (
                 <Loader />
               ) : (
@@ -69,47 +68,47 @@ const HomePage = () => {
               )}
             </div>
 
-            <div className="categories=items">
+            <div className="categories-item">
               <div className="title-md">
                 <h3>{categories[0]}</h3>
               </div>
               {productStatus === STATUS.LOADING ? (
                 <Loader />
               ) : (
-                <ProductList products={catProductOne} />
+                <ProductList products={catProductsOne} />
               )}
             </div>
 
-            <div className="categories=items">
+            <div className="categories-item">
               <div className="title-md">
                 <h3>{categories[1]}</h3>
               </div>
               {productStatus === STATUS.LOADING ? (
                 <Loader />
               ) : (
-                <ProductList products={catProductTwo} />
+                <ProductList products={catProductsTwo} />
               )}
             </div>
 
-            <div className="categories=items">
+            <div className="categories-item">
               <div className="title-md">
                 <h3>{categories[2]}</h3>
               </div>
               {productStatus === STATUS.LOADING ? (
                 <Loader />
               ) : (
-                <ProductList products={catProductThree} />
+                <ProductList products={catProductsThree} />
               )}
             </div>
 
-            <div className="categories=items">
+            <div className="categories-item">
               <div className="title-md">
                 <h3>{categories[3]}</h3>
               </div>
               {productStatus === STATUS.LOADING ? (
                 <Loader />
               ) : (
-                <ProductList products={catProductFour} />
+                <ProductList products={catProductsFour} />
               )}
             </div>
           </div>

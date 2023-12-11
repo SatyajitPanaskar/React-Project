@@ -35,5 +35,4 @@ const HeaderSlider = () => {
     </div>
   );
 };
-
 export default HeaderSlider;

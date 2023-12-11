@@ -11,6 +11,7 @@ const sidebarSlice = createSlice({
     setSidebarOn: (state) => {
       state.isSidebarOn = true;
     },
+
     setSidebarOff: (state) => {
       state.isSidebarOn = false;
     },

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer bg-orange">
       <div className="container py-4 text-center">
-        <div className="link flex align-center justify-center text-white fw-3 fs-14">
+        <div className="flex align-center justify-center text-white fw-3 fs-14">
           <Link to="/" className="text-uppercase">
             privacy policy
           </Link>
@@ -15,11 +15,11 @@ const Footer = () => {
           </Link>
           <div className="vert-line"></div>
           <Link to="/" className="text-uppercase">
-            about shopUp.
+            About SnapUp.
           </Link>
         </div>
         <span className="text-white copyright-text text-manrope fs-14 fw-3">
-          &copy; 2024 ShopUp. All Rights Reserved
+          &copy; 2022 SnapUp. All Rights Reserved.
         </span>
       </div>
     </footer>
