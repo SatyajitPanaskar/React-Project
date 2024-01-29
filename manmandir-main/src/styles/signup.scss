@@ -1,0 +1,62 @@
+.row {
+  background-color: white;
+  border-radius: 30px;
+}
+.mandirimage2 {
+  height: 200px;
+  width: 250px;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  margin-left: 25%;
+}
+.btnsign {
+  background-color: rgb(59, 56, 233);
+  color: white;
+  height: 50px;
+  width: 60%;
+  margin-left: 6%;
+  border-radius: 4px;
+  margin-top: -8%;
+  font-size: 15px;
+}
+.btncontinue:hover {
+  background-color: crimson;
+  border-radius: 10px;
+  border-color: crimson;
+}
+
+input[type="text"] {
+  border: none;
+  border-bottom: 2px solid gray;
+}
+input:focus {
+  outline: none;
+}
+.asign {
+  margin-left: 10%;
+  font-size: 20px;
+  margin-top: 50px;
+}
+
+.login2 {
+  margin-top: 7%;
+  margin-left: 25%;
+  font-size: 30px;
+  color: rgb(59, 56, 233);
+}
+.p2 {
+  color: blue;
+  font-size: 20px;
+  margin-left: 25%;
+}
+.existinglin {
+  font-size: 20px;
+  color: blue;
+  margin-top: -5%;
+  margin-left: 7%;
+}
+.passerror {
+  font-size: 11px;
+  color: red;
+  margin-top: -10px;
+}

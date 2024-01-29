@@ -1,0 +1,24 @@
+.navbar-co {
+  background-color: #f5fbfd;
+  border-bottom: 1px solid black;
+}
+
+.navbar img {
+  width: 15vw;
+  height: 4vw;
+  /* @media screen and (max-width: 320px) {
+    width: 70vw;
+    height: 15vw;
+  } */
+  @media screen and (max-width: 768px) {
+    /* Styles for tablets and below */
+    width: 25vw;
+    height: 5vw;
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Styles for mobile devices */
+    width: 70vw;
+    height: 15vw;
+  }
+}

@@ -1,0 +1,100 @@
+// .container {
+//   background-color: red;
+//   width: 200%;
+//   border: 5px solid black;
+// }
+.mandirimage1 {
+  height: 200px;
+  width: 250px;
+  margin-top: 4%;
+  margin-bottom: 2%;
+  margin-left: 25%;
+}
+.btnlogin {
+  background-color: rgb(59, 56, 233);
+  color: white;
+  height: 40px;
+  width: 60%;
+  margin-left: 5%;
+  border-radius: 2px;
+  margin-top: 2%;
+  font-size: 15px;
+}
+.btnlogin:hover {
+  background-color: crimson;
+  border-radius: 10px;
+  border-color: crimson;
+}
+
+.btn {
+  background-color: rgb(59, 56, 233);
+  color: white;
+  height: 40px;
+  width: 60%;
+  margin-left: 5%;
+  border-radius: 2px;
+  margin-top: -5%;
+  font-size: 15px;
+}
+.btnotp:hover {
+  background-color: crimson;
+  border-radius: 10px;
+  border-color: crimson;
+}
+input[type="text"],
+input[type="password"] {
+  border: none;
+  border-bottom: 2px solid gray;
+  margin-left: 5%;
+}
+input:focus {
+  outline: none;
+}
+.alogin {
+  margin-left: 4%;
+  font-size: 20px;
+  color: blue;
+  margin-top: -10%;
+  margin-left: 5%;
+}
+.forgot {
+  margin-top: 5%;
+  color: blue;
+  margin-left: 9%;
+  font-size: 15px;
+}
+.login1 {
+  margin-top: 7%;
+  margin-left: 25%;
+  font-size: 30px;
+  color: rgb(59, 56, 233);
+}
+.p1 {
+  color: blue;
+  font-size: 20px;
+  margin-left: 25%;
+}
+
+.line {
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.line1 {
+  margin-right: 7%;
+}
+
+.passerror {
+  font-size: 11px;
+  color: red;
+  margin-top: -10px;
+}
+.passworderror {
+  font-size: 11px;
+  color: red;
+  margin-top: -10px;
+}
+.signin {
+  margin-top: -20px;
+  margin-left: 7%;
+  font-size: 30px;
+}

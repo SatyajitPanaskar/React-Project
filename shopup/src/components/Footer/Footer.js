@@ -19,7 +19,7 @@ const Footer = () => {
           </Link>
         </div>
         <span className="text-white copyright-text text-manrope fs-14 fw-3">
-          &copy; 2022 SnapUp. All Rights Reserved.
+          &copy; 2024 SnapUp. All Rights Reserved.
         </span>
       </div>
     </footer>

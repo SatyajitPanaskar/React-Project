@@ -1,0 +1,39 @@
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid black;
+}
+.navbar .logo img {
+  height: 45px;
+  width: auto;
+  padding-left: 3vw;
+}
+.navbar .navlist .home {
+  color: black;
+  font-weight: 500;
+}
+.navbar .navlist a {
+  color: black;
+  font-weight: 400;
+}
+.navbar .navlist a:hover {
+  color: rgb(231, 16, 16);
+  font-weight: 400;
+}
+
+.navbar .navlist a button {
+  text-transform: uppercase;
+  border: none;
+  border-radius: 50px;
+  /* padding: 5px 10px; */
+  background-color: #a3238e;
+  color: #fff;
+  padding: 11px 23px;
+  line-height: 16px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.dropdown-button.hovered {
+  background-color: #f8f9fa; /* Change the background color as per your design */
+  color: #007bff; /* Change the text color as per your design */
+}
